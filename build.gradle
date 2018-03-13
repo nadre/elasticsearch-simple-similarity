@@ -31,8 +31,8 @@ noticeFile = rootProject.file("NOTICE.txt")
 version = rootProject.file('VERSION.txt').text.trim()
 
 esplugin {
-    description "Elasticsearch plugin that ignores tf-idf."
-    classname "org.elasticsearch.plugin.SimpleSimilarityPlugin"
+    description "Elasticsearch plugin that ignores the term frequency but uses the payload instead."
+    classname "org.elasticsearch.plugin.PayloadTFIDFSimilarityPlugin"
     name project.name
     version project.version
     licenseFile rootProject.file("LICENSE.txt")

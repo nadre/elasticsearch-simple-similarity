@@ -1,23 +1,12 @@
 <!--
-  Title: Elasticsearch simple similarity (aka "ignore tf-idf") plugin
-  Description: Elasticsearch plugin that ignores tf-idf.
-  Author: sdauletau
+  Title: Elasticsearch payload tfidf similarity plugin
+  Description: Elasticsearch plugin that ignores tf, uses payload value instead
+  Author: nadre
   -->
   
-# Elasticsearch "ignore tf-idf" plugin
+# Elasticsearch "payload tfidf similarity" plugin
 
-## Build
+Based on: https://github.com/sdauletau/elasticsearch-simple-similarity
 
-./gradlew clean assemble
-
-Note, that versions 6.2.x require Java 9.
-
-## Install
-
-./scripts/install-plugin.sh
-
-Re-start elasticsearch
-
-## Examples
-
-./examples/simple-similarity.sh
+Elastic Version 6.1.0
+Lucene Version 7.1.0
