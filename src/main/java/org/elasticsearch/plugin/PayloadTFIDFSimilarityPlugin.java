@@ -15,19 +15,19 @@
 package org.elasticsearch.plugin;
 
 import org.elasticsearch.index.IndexModule;
-import org.elasticsearch.index.similarity.SimpleSimilarityProvider;
+import org.elasticsearch.index.similarity.PayloadTFIDFSimilarityProvider;
 import org.elasticsearch.plugins.Plugin;
 
-public class SimpleSimilarityPlugin extends Plugin {
+public class PayloadTFIDFSimilarityPlugin extends Plugin {
     public String name() {
-        return "elasticsearch-simple-similarity";
+        return "elasticsearch-payload-tfidf-similarity";
     }
 
     public String description() {
-        return "Elasticsearch plugin that ignores tf-idf.";
+        return "Elasticsearch plugin that ignores the term frequency but uses the payload instead";
     }
 
     public void onIndexModule(IndexModule indexModule) {
-        indexModule.addSimilarity("simple-similarity", SimpleSimilarityProvider::new);
+        indexModule.addSimilarity("payload-tfidf-similarity", PayloadTFIDFSimilarityProvider::new);
     }
 }
